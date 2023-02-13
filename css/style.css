@@ -55,7 +55,40 @@ header ul.custom_navbar li a.active {
 /* SECTION COMMON */
 .body_section {
   width: 100%;
-  height: 100vh;
+}
+
+.body_section .title_cont {
+  height: 88px;
+}
+
+.body_section .title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #3b434a;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.body_section .title_bg {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #3b434a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.1;
 }
 
 /* HOME */
@@ -75,7 +108,7 @@ header ul.custom_navbar li a.active {
 
 .home_cover {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,4 +140,61 @@ header ul.custom_navbar li a.active {
   display: inline-block;
   font-size: 32px;
   color: #fff;
+}
+
+/* ABOUT */
+.about_cont {
+  padding: 48px 0;
+  position: relative;
+}
+
+.about_cont .avatar {
+  width: 100%;
+  height: 280px;
+  box-shadow: 0px 0px 8px 2px #cccccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.about_cont .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about_cont ul {
+  padding-left: 64px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about_cont ul li {
+  font-size: 20px;
+}
+
+/* RESUME */
+.resume_cont {
+  padding: 48px 0;
+  position: relative;
+}
+
+/* SKILL */
+.skill_cont {
+  padding: 48px 0;
+  position: relative;
+}
+
+/* PORTFOLIO */
+.portfolio_cont {
+  padding: 48px 0;
+  position: relative;
+}
+
+/* CONTACT */
+.contact_cont {
+  padding: 48px 0;
+  position: relative;
 }

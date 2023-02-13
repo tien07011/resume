@@ -10,25 +10,8 @@ $(function () {
               getPortfolio().then(
                 getContact().then(function () {
                   init();
-
-                  $(document).scroll(function () {
-                    let top = $(this).scrollTop();
-                    $("header").css("height", top > 120 ? "60px" : "80px");
-                    $("header").css(
-                      "background",
-                      top > 120 ? rgba : "transparent"
-                    );
-                  });
-
-                  $(window).on("hashchange", function () {
-                    let hash = window.location.hash;
-                    if (!hash) hash = "#home";
-                    hash = hash.replace("#", "");
-                    $(document).find(`.custom_navbar a`).removeClass("active");
-                    $(document)
-                      .find(`.custom_navbar a#header_${hash}`)
-                      .addClass("active");
-                  });
+                  $(document).scroll(onDocumentScroll);
+                  $(window).on("hashchange", onHashChange);
                 })
               )
             )
@@ -47,6 +30,20 @@ $(function () {
     $("header").css("height", top > 120 ? "60px" : "80px");
     $("header").css("background", top > 120 ? rgba : "transparent");
 
+    $(document).find(`.custom_navbar a#header_${hash}`).addClass("active");
+  }
+
+  function onDocumentScroll() {
+    let top = $(this).scrollTop();
+    $("header").css("height", top > 120 ? "60px" : "80px");
+    $("header").css("background", top > 120 ? rgba : "transparent");
+  }
+
+  function onHashChange() {
+    let hash = window.location.hash;
+    if (!hash) hash = "#home";
+    hash = hash.replace("#", "");
+    $(document).find(`.custom_navbar a`).removeClass("active");
     $(document).find(`.custom_navbar a#header_${hash}`).addClass("active");
   }
 
