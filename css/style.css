@@ -181,6 +181,44 @@ header ul.custom_navbar li a.active {
   position: relative;
 }
 
+.resume_cont .resume_title {
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+
+.resume_cont .resume_item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #82909c;
+  position: relative;
+}
+
+.resume_cont .resume_item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #82909c;
+}
+
+.resume_cont .resume_item h4 {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffb727;
+  margin-bottom: 10px;
+}
+
+.resume_cont .resume_item ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
 /* SKILL */
 .skill_cont {
   padding: 48px 0;
